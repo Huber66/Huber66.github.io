@@ -13,7 +13,7 @@
     <a class="brand" href="#top"><span class="brand-dot"></span>ZHENGYIFA<span class="muted">/ PORTFOLIO</span></a>
     <nav>
       <a href="#project">项目</a>
-      <a href="#work">我的工作</a>
+      <a href="#work">项目说明</a>
       <a href="#stack">技术栈</a>
       <a href="#contact">联系我</a>
     </nav>
@@ -24,7 +24,7 @@
       <div class="hero-copy">
         <p class="eyebrow">BACKEND · LLM INTEGRATION · MEMORY</p>
         <h1>把一个“家”，<br /><span>做成会记得你的系统。</span></h1>
-        <p class="lead">你好，我是 <strong>zhengyifa</strong>。这是我参与小米黑客马拉松项目 CyberHome 的作品展示页，重点记录我在后端接口、大模型接入和数据库/记忆功能上的工作。</p>
+        <p class="lead">你好，我是 <strong>zhengyifa</strong>。这是我参与小米黑客马拉松项目 CyberHome 的作品展示页，重点介绍 CyberHome 如何把家庭空间、虚拟角色、大模型对话和长期记忆组合成一个会持续发生故事的赛博之家。</p>
         <div class="actions">
           <a class="button primary" href="#project">查看项目 <span>↓</span></a>
           <a class="button ghost" href="#contact">联系我 <span>↗</span></a>
@@ -53,11 +53,11 @@
     </section>
 
     <section id="work" class="section shell dark-section">
-      <div class="section-heading"><span class="section-no">02</span><h2>我负责的工作</h2><span class="rule"></span></div>
+      <div class="section-heading"><span class="section-no">02</span><h2>项目说明</h2><span class="rule"></span></div>
       <div class="work-grid">
-        <article class="work-item"><span class="work-index">01</span><h3>后端接口</h3><p>基于 FastAPI 设计健康检查、世界状态、Agent 对话、场景事件和流式响应接口，让前端可以稳定读取和更新家庭世界。</p><div class="code-label">/healthz · /world · /agents/:id/chat</div></article>
-        <article class="work-item"><span class="work-index">02</span><h3>大模型接入</h3><p>搭建 OpenAI-compatible 的模型适配层，统一 provider、model、base URL、超时和重试配置，并保留无 Key 时的本地降级路径。</p><div class="code-label">provider adapter · fallback · streaming</div></article>
-        <article class="work-item"><span class="work-index">03</span><h3>数据库 / 记忆</h3><p>设计世界事件、聊天记忆和跨时间状态的持久化方案，让角色不只“回答一句话”，还能够记住发生过的事情。</p><div class="code-label">SQLite · event log · memory store</div></article>
+        <article class="work-item"><span class="work-index">01</span><h3>会自己生活的世界</h3><p>用户可以搭建房间、放置人物和家电。角色在同一空间相遇后，会根据各自的人设、状态和历史自然产生互动。</p><div class="code-label">SPACE · AGENTS · EMERGENT STORIES</div></article>
+        <article class="work-item"><span class="work-index">02</span><h3>大模型驱动对话</h3><p>系统通过可切换的模型适配层生成角色回应、开场故事和神谕反应，并在模型暂时不可用时保留可运行的本地降级体验。</p><div class="code-label">PROVIDER ADAPTER · FALLBACK · STREAMING</div></article>
+        <article class="work-item"><span class="work-index">03</span><h3>记忆与时间线</h3><p>世界事件、角色对话和时间变化会被记录下来。用户再次回到家时，角色可以沿着过去的经历继续生活，而不是从零开始。</p><div class="code-label">SQLITE · EVENT LOG · LONG MEMORY</div></article>
       </div>
     </section>
 
@@ -77,6 +77,7 @@
   <div class="footer-bottom shell"><span>© 2026 zhengyifa</span><span>CyberHome / Project Showcase</span></div>
 </body>
 </html>
+
 
 
 
