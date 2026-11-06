@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="zhengyifa 的 CyberHome 项目作品集" />
+  <title>zhengyifa · CyberHome 项目作品集</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <header class="nav shell">
+    <a class="brand" href="#top"><span class="brand-dot"></span>ZHENGYIFA<span class="muted">/ PORTFOLIO</span></a>
+    <nav>
+      <a href="#project">项目</a>
+      <a href="#work">我的工作</a>
+      <a href="#stack">技术栈</a>
+      <a href="#contact">联系我</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">BACKEND · LLM INTEGRATION · MEMORY</p>
+        <h1>把一个“家”，<br /><span>做成会记得你的系统。</span></h1>
+        <p class="lead">你好，我是 <strong>zhengyifa</strong>。这是我参与小米黑客马拉松项目 CyberHome 的作品展示页，重点记录我在后端接口、大模型接入和数据库/记忆功能上的工作。</p>
+        <div class="actions">
+          <a class="button primary" href="#project">查看项目 <span>↓</span></a>
+          <a class="button ghost" href="#contact">联系我 <span>↗</span></a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="scanline"></div>
+        <div class="status-chip"><span class="pulse"></span> SYSTEM ONLINE</div>
+        <img src="assets/cyber-home-pixel.png" alt="CyberHome 像素风家庭场景" />
+        <div class="art-caption"><span>CYBERHOME</span><span>PIXEL MEMORY / 01</span></div>
+      </div>
+    </section>
+
+    <section id="project" class="section shell">
+      <div class="section-heading"><span class="section-no">01</span><h2>项目概览</h2><span class="rule"></span></div>
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="card-top"><span class="tag">TEAM PROJECT · 2026</span><span class="arrow">↗</span></div>
+          <h3>CyberHome</h3>
+          <p class="card-subtitle">一个永远为你亮着灯的赛博之家</p>
+          <p>CyberHome 把家庭空间、虚拟角色和大模型能力组合在一起：用户可以在家中与家人和设备互动，系统会记录事件、理解上下文，并让世界在时间流逝中持续发生。</p>
+          <div class="metrics"><div><strong>FastAPI</strong><span>后端服务</span></div><div><strong>LLM</strong><span>角色对话</span></div><div><strong>Memory</strong><span>长期记忆</span></div></div>
+        </article>
+        <div class="quote-card"><div class="quote-mark">“</div><p>家不只是一个地址，也是一种确认：这个世界上有一个地方，是为你亮着灯的。</p><span>— CyberHome 产品理念</span></div>
+      </div>
+    </section>
+
+    <section id="work" class="section shell dark-section">
+      <div class="section-heading"><span class="section-no">02</span><h2>我负责的工作</h2><span class="rule"></span></div>
+      <div class="work-grid">
+        <article class="work-item"><span class="work-index">01</span><h3>后端接口</h3><p>基于 FastAPI 设计健康检查、世界状态、Agent 对话、场景事件和流式响应接口，让前端可以稳定读取和更新家庭世界。</p><div class="code-label">/healthz · /world · /agents/:id/chat</div></article>
+        <article class="work-item"><span class="work-index">02</span><h3>大模型接入</h3><p>搭建 OpenAI-compatible 的模型适配层，统一 provider、model、base URL、超时和重试配置，并保留无 Key 时的本地降级路径。</p><div class="code-label">provider adapter · fallback · streaming</div></article>
+        <article class="work-item"><span class="work-index">03</span><h3>数据库 / 记忆</h3><p>设计世界事件、聊天记忆和跨时间状态的持久化方案，让角色不只“回答一句话”，还能够记住发生过的事情。</p><div class="code-label">SQLite · event log · memory store</div></article>
+      </div>
+    </section>
+
+    <section id="stack" class="section shell">
+      <div class="section-heading"><span class="section-no">03</span><h2>技术栈</h2><span class="rule"></span></div>
+      <div class="stack-wrap"><span>Python</span><span>FastAPI</span><span>OpenAI SDK</span><span>TypeScript</span><span>React</span><span>SQLite</span><span>REST API</span><span>Event-driven design</span></div>
+      <div class="architecture"><div class="arch-node"><b>Frontend</b><small>React / TypeScript</small></div><div class="connector">→</div><div class="arch-node highlight"><b>CyberHome API</b><small>FastAPI / Uvicorn</small></div><div class="connector">→</div><div class="arch-node"><b>LLM + Memory</b><small>Provider adapter / SQLite</small></div></div>
+    </section>
+
+    <section class="section shell next-section">
+      <div class="section-heading"><span class="section-no">04</span><h2>项目特点</h2><span class="rule"></span></div>
+      <div class="features"><div><b>有回退能力</b><span>模型不可用时，系统仍能保持基本体验。</span></div><div><b>有上下文</b><span>角色状态、空间位置和历史事件可以串起来。</span></div><div><b>可继续扩展</b><span>新的角色、设备和场景可以沿着统一接口接入。</span></div></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer shell"><div><p class="eyebrow">LET'S BUILD SOMETHING USEFUL</p><h2>如果你想了解项目细节，欢迎联系我。</h2></div><div class="contact"><a href="mailto:3374971507@qq.com">3374971507@qq.com</a><a href="tel:13077819518">130 7781 9518</a><span>GitHub · Huber66</span></div></footer>
+  <div class="footer-bottom shell"><span>© 2026 zhengyifa</span><span>CyberHome / Project Showcase</span></div>
+</body>
+</html>
