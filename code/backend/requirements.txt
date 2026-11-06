@@ -1,0 +1,33 @@
+# CyberHome 后端依赖
+# ----------------------------------------------------------------------------
+# 本轮（内核 + 事件溯源）零第三方依赖：纯标准库 dataclasses/abc/random。
+# 这不是巧合——决策 30 移除 LangGraph 后，轻状态机用纯函数表达即可，
+# 无需任何编排框架。以下是后续轮次按 plan §11 逐步引入的依赖，先登记不安装。
+
+# 步骤 8 / F01 · FastAPI 端点（替换前端 mock service）—— 已启用
+fastapi>=0.115
+uvicorn>=0.32
+httpx>=0.27           # FastAPI TestClient 依赖（tests/test_api.py 必需）
+
+# F04 · LLM Provider 抽象层（DeepSeek + MiMo，OpenAI-compatible）—— 已启用
+# 两家都走 openai SDK 且都用标准 Bearer 鉴权；唯一差异是 token 参数名（DeepSeek
+# max_tokens；MiMo max_completion_tokens，封在各自 adapter）。无 key 时工厂降级
+# StubChatModel，不 import openai、不联网——本地/CI/测试零依赖也能跑闭环（红线）。
+openai>=1.0
+
+# 本地 .env 加载（方案 B）—— 仅服务器启动入口 `cyberhome/__main__.py` 使用，
+# 绝不进 import 链：测试会 import config/llm/api，若在其顶层 load_dotenv，真 key 会灌进
+# os.environ，导致 test_api 走真 LLMReactor 联网、test_llm 的 skipUnless 真跑，破「不联网」红线。
+python-dotenv>=1.0
+
+# 步骤 7 / F13 · Mem0 OSS 记忆层（替换 InMemoryStore；vector-only 自托管，决策 31）
+# vector-only：只用 Chroma 本地向量库，**不开 Neo4j / graph store**（红线：不引图数据库）。
+# ADD-only：add() 走 infer=False 存原文，不做 LLM 抽取/合并/删矛盾（决策 29）。
+# 未安装 / 无 embedding key / 初始化失败时：build_memory_store() 自动回退 InMemoryStore，
+# 不 import mem0、不阻塞主线；契约测试对 Mem0 用例 skipUnless 跳过（早验：装了即跑）。
+mem0ai>=0.1            # 记忆层框架
+chromadb>=0.5          # 本地持久化向量库（Mem0 的 vector_store 后端，path=CYBERHOME_CHROMA_PATH）
+
+# 明确不引入（决策 30 存活条件；后续 session 勿无脑加回）：
+#   langgraph —— 仅当 what-if 升到 B 档（分叉世界持久化，决策 33）时才重开评估。
+#   langsmith —— 与编排正交，仅在需要执行级 trace 可视化时可单独挂，不影响内核。
