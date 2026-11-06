@@ -25,3 +25,15 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
 
 .dark-section.shell{width:100%;max-width:none}
 
+
+/* Recorded product demo. */
+.demo-section{padding-top:8px;scroll-margin-top:24px}
+.demo-section .section-heading{margin-bottom:16px}
+.demo-intro{margin:0 0 28px;color:#55564f;font-size:15px;line-height:1.8;max-width:680px}
+.demo-player{margin:0;border:1px solid var(--ink);background:var(--dark);box-shadow:8px 8px 0 var(--acid)}
+.demo-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid #41443e;color:#c7cabf;font:10px 'DM Mono',monospace;letter-spacing:.04em}
+.demo-dot{display:inline-block;width:7px;height:7px;margin-right:7px;background:var(--accent);border-radius:50%}
+.demo-player video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#101110}
+.demo-player figcaption{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;color:#b5b8ae;font-size:12px;line-height:1.6}
+.demo-player figcaption a{color:var(--acid);text-underline-offset:4px;white-space:nowrap}
+@media(max-width:800px){.demo-section{padding-top:4px}.demo-section h2{font-size:26px}.demo-player{box-shadow:5px 5px 0 var(--acid)}.demo-toolbar{font-size:9px;padding:12px;letter-spacing:0}.demo-player figcaption{flex-wrap:wrap;padding:12px;gap:10px}.demo-intro{font-size:14px}}

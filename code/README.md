@@ -2,6 +2,12 @@
 
 CyberHome 是一个像素风的多 Agent 世界沙盒：用户可以搭建家庭空间、放置人物和家电，让角色在共同生活中自然产生关系和故事。
 
+## 操作演示
+
+[![CyberHome 项目演示](../assets/demo/cyberhome-demo-poster.jpg)](https://huber66.github.io/#demo)
+
+[在作品集中观看演示](https://huber66.github.io/#demo) · [直接打开 MP4](https://huber66.github.io/assets/demo/cyberhome-demo.mp4)
+
 ## 项目说明
 
 - **空间即舞台**：房间、人物和家电组成一个可以持续变化的家庭世界。
