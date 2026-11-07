@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="zhengyifa 的 CyberHome 项目作品集" />
+  <meta name="description" content="CyberHome：把多 Agent 技术用于日常陪伴与空间创造。亲手布置一个家，让角色结合人设、情境和记忆，留下共同生活的故事。" />
   <link rel="icon" href="../favicon.svg" />
   <title>CyberHome · zhengyifa 项目作品集</title>
   <link rel="stylesheet" href="../styles.css?v=20261106-demo" />
-  <link rel="stylesheet" href="../portfolio.css?v=20261107-tgac" />
+  <link rel="stylesheet" href="../portfolio.css?v=20261107-story" />
 </head>
 <body class="project-detail cyberhome-detail">
   <div class="grid-bg"></div>
@@ -15,7 +15,7 @@
     <a class="brand" href="../index.html"><span class="brand-dot"></span>ZHENGYIFA<span class="muted">/ PORTFOLIO</span></a>
     <nav>
       <a href="../index.html#project">全部项目</a>
-      <a href="#project">项目</a>
+      <a href="#why">为什么做</a>
       <a href="#demo">演示</a>
       <a href="#work">项目说明</a>
       <a href="#stack">技术栈</a>
@@ -29,7 +29,7 @@
       <div class="hero-copy">
         <p class="eyebrow">BACKEND · LLM INTEGRATION · MEMORY</p>
         <h1>把一个“家”，<br /><span>做成会记得你的系统。</span></h1>
-        <p class="lead">你好，我是 <strong>zhengyifa</strong>。CyberHome 是我参与的小米黑客马拉松项目，这里介绍 CyberHome 如何把家庭空间、虚拟角色、大模型对话和长期记忆组合成一个会持续发生故事的赛博之家。</p>
+        <p class="lead">CyberHome 是我参与的小米黑客马拉松项目。我们希望用多 Agent 技术，让用户亲手布置一个有熟悉角色、有共同经历的家；在闲暇或独处时打开，看看这里又发生了什么，让日常陪伴有一个可以回来的地方。</p>
         <div class="actions">
           <a class="button primary" href="#project">查看项目 <span>↓</span></a>
           <a class="button ghost" href="#demo">观看演示 <span>▶</span></a>
@@ -43,6 +43,27 @@
       </div>
     </section>
 
+    <section id="why" class="section shell project-story" aria-labelledby="why-title">
+      <div class="section-heading"><span class="section-no">WHY</span><h2 id="why-title">为什么做一个赛博家</h2><span class="rule"></span></div>
+      <div class="story-grid">
+        <div class="story-copy">
+          <p class="story-opening">让“有人在”和“被记得”，<br />成为可以走进的日常。</p>
+          <p>项目的出发点是一个很日常的愿望：下班回到住处，或者在深夜打开手机时，能走进一个熟悉、有生活气息的地方，看看在意的角色，知道他们刚刚经历了什么。</p>
+          <p>CyberHome 希望把这种感受放进一个可以亲手创造的家庭世界。用户设定角色的性格与习惯、布置空间、安排谁与谁相遇；角色结合人设、所在房间和记忆参与互动，日常事件逐渐积累成这个家的共同经历。</p>
+          <p>创造带来投入，相遇带来故事，记忆为下一次互动提供延续。我们希望用户愿意回来，是因为惦记这里的人和故事。</p>
+        </div>
+        <aside class="story-scenes" aria-labelledby="scenes-title">
+          <h3 id="scenes-title">希望陪伴的三个时刻</h3>
+          <dl>
+            <div><dt>想创造的时候</dt><dd>布置一个自己的小世界，设定有性格的角色，看看他们在同一空间会发生怎样的互动。</dd></div>
+            <div><dt>独处的碎片时间</dt><dd>工作间隙、下班后或深夜打开，看看动态流，与熟悉的角色聊几句，让日常多一点生活气息。</dd></div>
+            <div><dt>想一起留下故事的时候</dt><dd>把熟悉的口头禅和生活习惯写进虚拟角色，围绕搭家、观察互动，获得可以分享的共同话题。</dd></div>
+          </dl>
+        </aside>
+      </div>
+      <p class="story-loop"><span>体验主线</span>布置空间 → 创建角色 → 放入房间 → 观察互动 → 对话或投下事件 → 留下记忆与故事</p>
+    </section>
+
     <section id="project" class="section shell">
       <div class="section-heading"><span class="section-no">01</span><h2>项目概览</h2><span class="rule"></span></div>
       <div class="project-grid">
@@ -50,7 +71,7 @@
           <div class="card-top"><span class="tag">TEAM PROJECT · 2026</span><span class="arrow">↗</span></div>
           <h3>CyberHome</h3>
           <p class="card-subtitle">一个永远为你亮着灯的赛博之家</p>
-          <p>CyberHome 把家庭空间、虚拟角色和大模型能力组合在一起：用户可以在家中与家人和设备互动，系统会记录事件、理解上下文，并让世界在时间流逝中持续发生。</p>
+          <p>CyberHome 把家庭空间、虚拟角色和大模型能力组合在一起：用户可以与家中角色自由对话，也可以用神谕投下一件新鲜事。系统将角色反应与世界变化写入事件流，结合记忆让后续互动接上之前的经历。</p>
           <div class="metrics"><div><strong>FastAPI</strong><span>后端服务</span></div><div><strong>LLM</strong><span>角色对话</span></div><div><strong>Memory</strong><span>长期记忆</span></div></div><a class="source-link" href="https://github.com/Huber66/Huber66.github.io/tree/main/code" target="_blank" rel="noreferrer">查看源码仓库 <span>↗</span></a>
         </article>
         <div class="quote-card"><div class="quote-mark">“</div><p>家不只是一个地址，也是一种确认：这个世界上有一个地方，是为你亮着灯的。</p><span>— CyberHome 产品理念</span></div>
@@ -73,9 +94,9 @@
     <section id="work" class="section shell dark-section">
       <div class="section-heading"><span class="section-no">02</span><h2>项目说明</h2><span class="rule"></span></div>
       <div class="work-grid">
-        <article class="work-item"><span class="work-index">01</span><h3>会自己生活的世界</h3><p>用户可以搭建房间、放置人物和家电。角色在同一空间相遇后，会根据各自的人设、状态和历史自然产生互动。</p><div class="code-label">SPACE · AGENTS · EMERGENT STORIES</div></article>
-        <article class="work-item"><span class="work-index">02</span><h3>大模型驱动对话</h3><p>系统通过可切换的模型适配层生成角色回应、开场故事和神谕反应，并在模型暂时不可用时保留可运行的本地降级体验。</p><div class="code-label">PROVIDER ADAPTER · FALLBACK · STREAMING</div></article>
-        <article class="work-item"><span class="work-index">03</span><h3>记忆与时间线</h3><p>世界事件、角色对话和时间变化会被记录下来。用户再次回到家时，角色可以沿着过去的经历继续生活，而不是从零开始。</p><div class="code-label">SQLITE · EVENT LOG · LONG MEMORY</div></article>
+        <article class="work-item"><span class="work-index">01</span><h3>让空间安排相遇</h3><p>布置空间也是在安排谁与谁共处。人物、家电与家具角色进入同一房间后，系统结合各自人设、状态和记忆生成反应，让空间操作能够带来新的故事。</p><div class="code-label">SPACE · AGENTS · SHARED CONTEXT</div></article>
+        <article class="work-item"><span class="work-index">02</span><h3>让参与带来变化</h3><p>用户可以找某个角色聊天，也可以投下“今天降温了”这样的神谕事件。模型结合当前情境生成角色回应与开场故事，各角色有自己的表达方式，也可以选择沉默。</p><div class="code-label">PERSONA · DIALOGUE · ORACLE</div></article>
+        <article class="work-item"><span class="work-index">03</span><h3>让归家接上生活</h3><p>事件时间线与记忆保存发生过的事，为之后的互动提供上下文。再次打开时，离线补演根据离开时长生成故事，在有限的模型调用下呈现生活的连续感。</p><div class="code-label">EVENT LOG · MEMORY · CATCH-UP</div></article>
       </div>
     </section>
 
