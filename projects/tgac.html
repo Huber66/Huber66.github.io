@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="2025 腾讯游戏算法大赛数智决策科学赛道冠军方案：基于 LangGraph、DeepSeek 和 StarRocks 的 Text-to-SQL Agent。" />
+  <title>TGAC 赛道冠军方案 · zhengyifa 项目作品集</title>
+  <link rel="icon" href="../favicon.svg" />
+  <link rel="stylesheet" href="../styles.css?v=20261106-demo" />
+  <link rel="stylesheet" href="../portfolio.css?v=20261107-tgac" />
+</head>
+<body class="project-detail tgac-detail">
+  <div class="grid-bg"></div>
+  <header class="nav shell">
+    <a class="brand" href="../index.html"><span class="brand-dot"></span>ZHENGYIFA<span class="muted">/ PORTFOLIO</span></a>
+    <nav aria-label="项目导航">
+      <a href="../index.html#project">全部项目</a>
+      <a href="#design">方案设计</a>
+      <a href="#flow">执行流程</a>
+      <a href="#demo">运行示例</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="breadcrumb shell"><a href="../index.html#project">全部项目</a><span>/</span><span>TGAC Text-to-SQL</span></div>
+    <section class="detail-hero shell" aria-labelledby="project-title">
+      <div>
+        <p class="eyebrow">TENCENT GAMES ALGORITHM COMPETITION / 2025</p>
+        <div class="award-line"><span>2025 腾讯游戏算法大赛</span><b>数智决策科学赛道冠军</b></div>
+        <h1 id="project-title">TGAC<br /><span>Text-to-SQL Agent.</span></h1>
+        <p class="detail-lead">面向游戏数据分析的 SQL 智能体。基于 LangGraph、DeepSeek 和 StarRocks，结合业务逻辑指引、SQL 执行反馈与错误结果拦截，完成自然语言到查询结果的处理闭环。</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/Huber66/tgac-2025-text2sql-agent" target="_blank" rel="noreferrer">查看开源方案 <span aria-hidden="true">↗</span></a>
+          <a class="button ghost" href="#flow">了解执行流程 <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <aside class="workflow-panel" aria-label="查询处理流程概览">
+        <div class="panel-label">TEXT TO SQL / WORKFLOW</div>
+        <h2>让查询结合业务口径，<br />再用执行结果反馈。</h2>
+        <ol class="workflow-list">
+          <li>读取问题与相关表结构</li>
+          <li>注入业务知识与逐题逻辑指引</li>
+          <li>调用 SQL 工具查询与修正</li>
+          <li>检查提交，重执行并保存结果</li>
+        </ol>
+      </aside>
+    </section>
+
+    <section id="design" class="section shell dark-section">
+      <div class="section-heading"><span class="section-no">01</span><h2>方案设计</h2><span class="rule"></span></div>
+      <div class="work-grid">
+        <article class="work-item"><span class="work-index">CONTEXT</span><h3>业务逻辑注入</h3><p>按题目提供的表列表提取 Schema，将通用知识、题目知识与 Logic Guide 组合进上下文，明确日期、关联与统计口径。</p><div class="code-label">SCHEMA · KNOWLEDGE · LOGIC GUIDE</div></article>
+        <article class="work-item"><span class="work-index">EXECUTION</span><h3>SQL 执行反馈</h3><p>通过工具观察数据库样本、执行查询并接收报错。Agent 根据实际返回的数据和执行信息继续规划与修正。</p><div class="code-label">LANGGRAPH · TOOL CALLING · STARROCKS</div></article>
+        <article class="work-item"><span class="work-index">FEEDBACK</span><h3>错误结果拦截</h3><p>把查询结果转换为指纹，与已知错误样本比较，利用限次重试反馈引导修改。最终提交的 SQL 会重新执行并保存实际结果。</p><div class="code-label">RESULT CHECK · RETRY · RE-EXECUTION</div></article>
+      </div>
+    </section>
+
+    <section id="flow" class="section shell" aria-labelledby="flow-title">
+      <div class="section-heading"><span class="section-no">02</span><h2 id="flow-title">执行流程</h2><span class="rule"></span></div>
+      <p class="detail-section-intro">单题运行由上下文构造、Agent 工具调用和提交检查衔接。执行过程中产生的 SQL、查询结果与反馈共同组成可回看的轨迹。</p>
+      <ol class="pipeline">
+        <li><h3>构造上下文</h3><p>读取业务问题、相关表结构和知识资料，组装当前任务的提示词。</p></li>
+        <li><h3>查询与修正</h3><p>执行样本探查和完整 SQL，根据数据或报错调整查询与规划。</p></li>
+        <li><h3>检查提交</h3><p>将提交结果与错误样本比较，按重试策略返回反馈或结束图流程。</p></li>
+        <li><h3>重执行与保存</h3><p>重新执行最终 SQL，将实际返回值写入 JSON，保留逐步运行记录。</p></li>
+      </ol>
+      <p class="flow-note">运行之间，通过答案管理工具维护正确、错误样本，并从参考 SQL 或待分析任务中提炼 Logic Guide。<a href="https://github.com/Huber66/tgac-2025-text2sql-agent/blob/main/docs/solution.md" target="_blank" rel="noreferrer">阅读完整方案与知识维护流程 ↗</a></p>
+    </section>
+
+    <section id="demo" class="section shell" aria-labelledby="demo-title">
+      <div class="section-heading"><span class="section-no">03</span><h2 id="demo-title">公开示例与闭环回放</h2><span class="rule"></span></div>
+      <p class="detail-section-intro">使用独立编写的演示数据，统计指定日期 returning 玩家在各游戏的游玩总时长。固定工具序列展示错误日期查询被拦截、规划修正与最终提交的完整过程。</p>
+      <div class="demo-columns">
+        <div>
+          <div class="command-block">
+            <div class="panel-label">LOCAL DEMO / SCRIPTED TOOL REPLAY</div>
+            <pre><code>python scripts/replay_demo.py
+python scripts/verify_demo.py --file output/demo/replay_result.json --ids sql_1</code></pre>
+            <div class="command-output">[PASS] Known empty result rejected; revised SQL accepted.<br />[PASS] Final SQL re-executed; result matches the synthetic fixture.<br />[PASS] sql_1</div>
+          </div>
+          <p class="demo-note">初始化演示数据库后即可运行。回放使用预设 SQL 与工具调用，实际访问数据库和拦截器，无需模型 API 密钥。</p>
+        </div>
+        <div class="result-summary">
+          <h3>示例查询结果</h3>
+          <p>日期：2026-01-01<br />人群：标签为 returning 的玩家<br />聚合：按游戏汇总游玩分钟数</p>
+          <table class="result-table"><thead><tr><th scope="col">game_id</th><th scope="col">total_minutes</th></tr></thead><tbody><tr><td>g_alpha</td><td>75</td></tr><tr><td>g_beta</td><td>60</td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="resource-list">
+        <a href="https://github.com/Huber66/tgac-2025-text2sql-agent/blob/main/docs/reproduction.md" target="_blank" rel="noreferrer">环境与运行指南 ↗<span>Docker、数据库初始化与模型配置</span></a>
+        <a href="https://github.com/Huber66/tgac-2025-text2sql-agent/blob/main/docs/walkthrough.md" target="_blank" rel="noreferrer">逐步回放说明 ↗<span>6 次工具调用与 4 次 SQL 查询</span></a>
+        <a href="https://github.com/Huber66/tgac-2025-text2sql-agent/blob/main/examples/replay_trace.json" target="_blank" rel="noreferrer">查看示例执行轨迹 ↗<span>工具参数、反馈与最终结果</span></a>
+      </div>
+    </section>
+
+    <section id="stack" class="section shell">
+      <div class="section-heading"><span class="section-no">04</span><h2>技术栈</h2><span class="rule"></span></div>
+      <div class="stack-wrap"><span>Python</span><span>LangGraph</span><span>DeepSeek</span><span>StarRocks</span><span>PyMySQL</span><span>Docker</span><span>Context Engineering</span><span>Tool Calling</span></div>
+    </section>
+
+    <div class="next-project shell"><div><p>继续浏览项目</p><a href="cyberhome.html">CyberHome · 角色对话与长期记忆 ↗</a></div><a href="../index.html#project">返回全部项目</a></div>
+  </main>
+
+  <footer id="contact" class="footer shell"><div><p class="eyebrow">LET'S BUILD SOMETHING USEFUL</p><h2><span class="contact-title">聊聊项目与技术，</span><span class="nowrap">欢迎联系我。</span></h2></div><div class="contact"><a href="mailto:3374971507@qq.com">3374971507@qq.com</a><a href="tel:13077819518">130 7781 9518</a><a class="github-link" href="https://github.com/Huber66" target="_blank" rel="noreferrer">GitHub · Huber66 ↗</a></div></footer>
+  <div class="footer-bottom"><span>© 2026 zhengyifa</span><span>TGAC / Text-to-SQL Agent</span></div>
+</body>
+</html>

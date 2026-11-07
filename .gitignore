@@ -1,0 +1,6 @@
+output/
+.playwright-cli/
+__pycache__/
+.env
+.env.*
+!.env.example

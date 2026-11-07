@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="zhengyifa 的 CyberHome 项目作品集" />
+  <link rel="icon" href="../favicon.svg" />
+  <title>CyberHome · zhengyifa 项目作品集</title>
+  <link rel="stylesheet" href="../styles.css?v=20261106-demo" />
+  <link rel="stylesheet" href="../portfolio.css?v=20261107-tgac" />
+</head>
+<body class="project-detail cyberhome-detail">
+  <div class="grid-bg"></div>
+  <header class="nav shell">
+    <a class="brand" href="../index.html"><span class="brand-dot"></span>ZHENGYIFA<span class="muted">/ PORTFOLIO</span></a>
+    <nav>
+      <a href="../index.html#project">全部项目</a>
+      <a href="#project">项目</a>
+      <a href="#demo">演示</a>
+      <a href="#work">项目说明</a>
+      <a href="#stack">技术栈</a>
+      <a href="#contact">联系我</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="breadcrumb shell"><a href="../index.html#project">全部项目</a><span>/</span><span>CyberHome</span></div>
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">BACKEND · LLM INTEGRATION · MEMORY</p>
+        <h1>把一个“家”，<br /><span>做成会记得你的系统。</span></h1>
+        <p class="lead">你好，我是 <strong>zhengyifa</strong>。CyberHome 是我参与的小米黑客马拉松项目，这里介绍 CyberHome 如何把家庭空间、虚拟角色、大模型对话和长期记忆组合成一个会持续发生故事的赛博之家。</p>
+        <div class="actions">
+          <a class="button primary" href="#project">查看项目 <span>↓</span></a>
+          <a class="button ghost" href="#demo">观看演示 <span>▶</span></a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="scanline"></div>
+        <div class="status-chip"><span class="pulse"></span> SYSTEM ONLINE</div>
+        <img src="../assets/cyber-home-pixel.png" alt="CyberHome 像素风家庭场景" />
+        <div class="art-caption"><span>CYBERHOME</span><span>PIXEL MEMORY / 01</span></div>
+      </div>
+    </section>
+
+    <section id="project" class="section shell">
+      <div class="section-heading"><span class="section-no">01</span><h2>项目概览</h2><span class="rule"></span></div>
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="card-top"><span class="tag">TEAM PROJECT · 2026</span><span class="arrow">↗</span></div>
+          <h3>CyberHome</h3>
+          <p class="card-subtitle">一个永远为你亮着灯的赛博之家</p>
+          <p>CyberHome 把家庭空间、虚拟角色和大模型能力组合在一起：用户可以在家中与家人和设备互动，系统会记录事件、理解上下文，并让世界在时间流逝中持续发生。</p>
+          <div class="metrics"><div><strong>FastAPI</strong><span>后端服务</span></div><div><strong>LLM</strong><span>角色对话</span></div><div><strong>Memory</strong><span>长期记忆</span></div></div><a class="source-link" href="https://github.com/Huber66/Huber66.github.io/tree/main/code" target="_blank" rel="noreferrer">查看源码仓库 <span>↗</span></a>
+        </article>
+        <div class="quote-card"><div class="quote-mark">“</div><p>家不只是一个地址，也是一种确认：这个世界上有一个地方，是为你亮着灯的。</p><span>— CyberHome 产品理念</span></div>
+      </div>
+    </section>
+
+    <section id="demo" class="section shell demo-section" aria-labelledby="demo-title">
+      <div class="section-heading"><span class="section-no">PLAY</span><h2 id="demo-title">让这个家，动起来。</h2><span class="rule"></span></div>
+      <p class="demo-intro">一段实际操作录像，看看空间如何被搭建、日常如何发生，以及角色如何回应你。</p>
+      <figure class="demo-player">
+        <div class="demo-toolbar"><span><span class="demo-dot"></span> CYBERHOME / LIVE DEMO</span><span>1080P · 01:54</span></div>
+        <video controls playsinline preload="metadata" poster="../assets/demo/cyberhome-demo-poster.jpg" width="1920" height="1080" aria-label="CyberHome 项目操作演示录像">
+          <source src="../assets/demo/cyberhome-demo.mp4" type="video/mp4" />
+          你的浏览器暂不支持视频播放，请<a href="../assets/demo/cyberhome-demo.mp4">直接打开演示视频</a>。
+        </video>
+        <figcaption><span>空间搭建 · 动态事件 · 角色交互</span><a href="../assets/demo/cyberhome-demo.mp4" download="CyberHome-Demo.mp4">下载演示视频 <span aria-hidden="true">↓</span></a></figcaption>
+      </figure>
+    </section>
+
+    <section id="work" class="section shell dark-section">
+      <div class="section-heading"><span class="section-no">02</span><h2>项目说明</h2><span class="rule"></span></div>
+      <div class="work-grid">
+        <article class="work-item"><span class="work-index">01</span><h3>会自己生活的世界</h3><p>用户可以搭建房间、放置人物和家电。角色在同一空间相遇后，会根据各自的人设、状态和历史自然产生互动。</p><div class="code-label">SPACE · AGENTS · EMERGENT STORIES</div></article>
+        <article class="work-item"><span class="work-index">02</span><h3>大模型驱动对话</h3><p>系统通过可切换的模型适配层生成角色回应、开场故事和神谕反应，并在模型暂时不可用时保留可运行的本地降级体验。</p><div class="code-label">PROVIDER ADAPTER · FALLBACK · STREAMING</div></article>
+        <article class="work-item"><span class="work-index">03</span><h3>记忆与时间线</h3><p>世界事件、角色对话和时间变化会被记录下来。用户再次回到家时，角色可以沿着过去的经历继续生活，而不是从零开始。</p><div class="code-label">SQLITE · EVENT LOG · LONG MEMORY</div></article>
+      </div>
+    </section>
+
+    <section id="stack" class="section shell">
+      <div class="section-heading"><span class="section-no">03</span><h2>技术栈</h2><span class="rule"></span></div>
+      <div class="stack-wrap"><span>Python</span><span>FastAPI</span><span>OpenAI SDK</span><span>TypeScript</span><span>React</span><span>SQLite</span><span>REST API</span><span>Event-driven design</span></div>
+      <div class="architecture"><div class="arch-node"><b>Frontend</b><small>React / TypeScript</small></div><div class="connector">→</div><div class="arch-node highlight"><b>CyberHome API</b><small>FastAPI / Uvicorn</small></div><div class="connector">→</div><div class="arch-node"><b>LLM + Memory</b><small>Provider adapter / SQLite</small></div></div>
+    </section>
+
+    <section class="section shell next-section">
+      <div class="section-heading"><span class="section-no">04</span><h2>项目特点</h2><span class="rule"></span></div>
+      <div class="features"><div><b>有回退能力</b><span>模型不可用时，系统仍能保持基本体验。</span></div><div><b>有上下文</b><span>角色状态、空间位置和历史事件可以串起来。</span></div><div><b>可继续扩展</b><span>新的角色、设备和场景可以沿着统一接口接入。</span></div></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer shell"><div><p class="eyebrow">LET'S BUILD SOMETHING USEFUL</p><h2><span class="contact-title">聊聊 CyberHome，</span><span class="nowrap">欢迎联系我。</span></h2></div><div class="contact"><a href="mailto:3374971507@qq.com">3374971507@qq.com</a><a href="tel:13077819518">130 7781 9518</a><a class="github-link" href="https://github.com/Huber66" target="_blank" rel="noreferrer">GitHub · Huber66 ↗</a></div></footer>
+  <div class="footer-bottom"><span>© 2026 zhengyifa</span><span>CyberHome / Project Showcase</span></div>
+</body>
+</html>
