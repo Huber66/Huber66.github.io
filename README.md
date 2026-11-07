@@ -56,7 +56,7 @@ CyberHome 是我参与的小米黑客马拉松项目，也是一次把多 Agent 
 
 ## 仓库结构
 
-- `index.html`：双项目首页。
+- `index.html`：按 CyberHome → TGAC 顺序展示的首页。
 - `projects/cyberhome.html`、`projects/tgac.html`：项目详情页。
 - `styles.css`、`portfolio.css`：共享样式与响应式布局。
 - `assets/demo/`：演示视频与封面。

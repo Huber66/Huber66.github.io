@@ -7,60 +7,39 @@
   <link rel="icon" href="favicon.svg" />
   <title>zhengyifa · AI 应用与数据系统作品集</title>
   <link rel="stylesheet" href="styles.css?v=20261106-demo" />
-  <link rel="stylesheet" href="portfolio.css?v=20261107-tgac" />
+  <link rel="stylesheet" href="portfolio.css?v=20261107-sequential" />
 </head>
 <body class="portfolio-home">
   <div class="grid-bg"></div>
   <header class="nav shell">
     <a class="brand" href="#top"><span class="brand-dot"></span>ZHENGYIFA<span class="muted">/ PORTFOLIO</span></a>
     <nav>
-      <a href="#project">项目</a>
+      <a href="#project">CyberHome</a>
+      <a href="#tgac">TGAC</a>
       <a href="#demo">演示</a>
-      <a href="#work">实现思路</a>
       <a href="#stack">技术栈</a>
       <a href="#contact">联系我</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero shell">
+    <section id="project" class="hero shell" aria-labelledby="cyberhome-title">
       <div class="hero-copy">
-        <p class="eyebrow">AI APPLICATIONS · AGENTS · DATA SYSTEMS</p>
-        <h1>AI 应用与<br /><span>数据系统作品集。</span></h1>
-        <p class="lead">你好，我是 <strong>zhengyifa</strong>。这里记录我在 AI 应用与数据系统方向的项目：CyberHome 把角色对话与长期记忆融入家庭空间；TGAC Text-to-SQL Agent 结合业务知识与 SQL 执行反馈，完成游戏数据查询。</p>
-        <div class="hero-honor"><span class="honor-label">CHAMPION</span><span>2025 腾讯游戏算法大赛<br /><strong>数智决策科学赛道冠军</strong></span></div>
+        <p class="eyebrow">PROJECT 01 / XIAOMI HACKATHON · 2026</p>
+        <h1 id="cyberhome-title">CyberHome<span>让陪伴，有一个家。</span></h1>
+        <p class="lead">CyberHome 是我参与的小米黑客马拉松项目。我们希望用多 Agent 技术，让用户亲手布置一个有熟悉角色、有共同经历的家；在闲暇或独处时打开，看看这里又发生了什么，让日常陪伴有一个可以回来的地方。</p>
+        <div class="home-project-tags" aria-label="CyberHome 技术与能力"><span>FastAPI</span><span>角色对话</span><span>长期记忆</span></div>
         <div class="actions">
-          <a class="button primary" href="#project">查看项目 <span>↓</span></a>
+          <a class="button primary" href="projects/cyberhome.html">了解 CyberHome <span aria-hidden="true">↗</span></a>
           <a class="button ghost" href="#demo">观看演示 <span>▶</span></a>
         </div>
+        <div class="project-footlinks"><a class="quiet-link" href="https://github.com/Huber66/Huber66.github.io/tree/main/code" target="_blank" rel="noreferrer">GitHub 源码 ↗</a><a class="quiet-link" href="#tgac">下一个项目：TGAC Text-to-SQL ↓</a></div>
       </div>
       <div class="hero-art">
         <div class="scanline"></div>
         <div class="status-chip"><span class="pulse"></span> SYSTEM ONLINE</div>
         <img src="assets/cyber-home-pixel.png" alt="CyberHome 像素风家庭场景" />
         <div class="art-caption"><span>CYBERHOME</span><span>SELECTED PROJECT / 01</span></div>
-      </div>
-    </section>
-
-    <section id="project" class="section shell">
-      <div class="section-heading"><span class="section-no">01</span><h2>项目概览</h2><span class="rule"></span></div>
-      <div class="project-grid portfolio-projects">
-        <article class="project-card featured cyberhome-card">
-          <div class="card-top"><span class="tag">XIAOMI HACKATHON · 2026</span><span class="arrow" aria-hidden="true">↗</span></div>
-          <h3>CyberHome</h3>
-          <p class="card-subtitle">一个永远为你亮着灯的赛博之家</p>
-          <p>希望让日常陪伴有一个可以回来的地方。用户亲手布置空间、设定角色，在相遇、对话与事件中积累共同经历；再次打开时，沿着记忆与故事接上这个家的生活。</p>
-          <div class="metrics"><div><strong>FastAPI</strong><span>后端服务</span></div><div><strong>LLM</strong><span>角色对话</span></div><div><strong>Memory</strong><span>长期记忆</span></div></div>
-          <div class="card-links"><a class="source-link" href="projects/cyberhome.html">查看项目详情 <span aria-hidden="true">↗</span></a><a class="quiet-link" href="https://github.com/Huber66/Huber66.github.io/tree/main/code" target="_blank" rel="noreferrer">GitHub 源码</a></div>
-        </article>
-        <article class="project-card featured tgac-card">
-          <div class="card-top"><span class="tag">TGAC · 2025</span><span class="champion-chip">赛道冠军</span></div>
-          <h3>TGAC<br />Text-to-SQL</h3>
-          <p class="card-subtitle">面向游戏数据分析的 SQL 智能体</p>
-          <p>2025 腾讯游戏算法大赛数智决策科学赛道冠军方案。基于 LangGraph、DeepSeek 和 StarRocks，结合业务逻辑指引、SQL 执行反馈与错误结果拦截，完成自然语言到查询结果的处理闭环。</p>
-          <div class="metrics"><div><strong>LangGraph</strong><span>流程编排</span></div><div><strong>Context</strong><span>业务知识</span></div><div><strong>StarRocks</strong><span>查询执行</span></div></div>
-          <div class="card-links"><a class="source-link" href="projects/tgac.html">查看冠军方案 <span aria-hidden="true">↗</span></a><a class="quiet-link" href="https://github.com/Huber66/tgac-2025-text2sql-agent" target="_blank" rel="noreferrer">GitHub 源码</a></div>
-        </article>
       </div>
     </section>
 
@@ -77,8 +56,32 @@
       </figure>
     </section>
 
+    <section id="tgac" class="home-project-tgac shell" aria-labelledby="tgac-title">
+      <div>
+        <p class="eyebrow">PROJECT 02 / TENCENT GAMES ALGORITHM COMPETITION · 2025</p>
+        <div class="award-line"><span>2025 腾讯游戏算法大赛</span><b>数智决策科学赛道冠军</b></div>
+        <h2 id="tgac-title">TGAC<span>Text-to-SQL Agent.</span></h2>
+        <p class="lead">面向游戏数据分析的 SQL 智能体。基于 LangGraph、DeepSeek 和 StarRocks，结合业务逻辑指引、SQL 执行反馈与错误结果拦截，完成自然语言到查询结果的处理闭环。</p>
+        <div class="home-project-tags" aria-label="TGAC 技术栈"><span>LangGraph</span><span>DeepSeek</span><span>StarRocks</span></div>
+        <div class="actions">
+          <a class="button primary" href="projects/tgac.html">查看冠军方案 <span aria-hidden="true">↗</span></a>
+          <a class="button ghost" href="https://github.com/Huber66/tgac-2025-text2sql-agent" target="_blank" rel="noreferrer">GitHub 源码 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="workflow-panel" aria-label="TGAC 查询处理流程概览">
+        <div class="panel-label">TEXT TO SQL / WORKFLOW</div>
+        <h3>让查询结合业务口径，<br />再用执行结果反馈。</h3>
+        <ol class="workflow-list">
+          <li>读取问题与相关表结构</li>
+          <li>注入业务知识与逐题逻辑指引</li>
+          <li>调用 SQL 工具查询与修正</li>
+          <li>检查提交，重执行并保存结果</li>
+        </ol>
+      </aside>
+    </section>
+
     <section id="work" class="section shell dark-section">
-      <div class="section-heading"><span class="section-no">02</span><h2>实现思路</h2><span class="rule"></span></div>
+      <div class="section-heading"><span class="section-no">03</span><h2>实现思路</h2><span class="rule"></span></div>
       <div class="work-grid">
         <article class="work-item"><span class="work-index">01</span><h3>组织上下文</h3><p>CyberHome 结合角色人设、空间状态与历史记忆；TGAC 结合题目、表结构和业务规则，为模型提供当前任务需要的信息。</p><div class="code-label">PERSONA · SCHEMA · CONTEXT</div></article>
         <article class="work-item"><span class="work-index">02</span><h3>连接模型与执行</h3><p>在家庭空间中生成对话与事件，在数据场景中调用 SQL 工具查询数据库，并利用实际执行反馈推进任务。</p><div class="code-label">LLM INTEGRATION · TOOL CALLING</div></article>
@@ -87,7 +90,7 @@
     </section>
 
     <section id="stack" class="section shell">
-      <div class="section-heading"><span class="section-no">03</span><h2>技术栈</h2><span class="rule"></span></div>
+      <div class="section-heading"><span class="section-no">04</span><h2>技术栈</h2><span class="rule"></span></div>
       <div class="stack-wrap"><span>Python</span><span>LangGraph</span><span>DeepSeek</span><span>StarRocks</span><span>Docker</span><span>FastAPI</span><span>TypeScript</span><span>React</span><span>SQLite</span><span>OpenAI SDK</span></div>
     </section>
 
